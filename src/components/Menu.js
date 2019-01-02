@@ -22,12 +22,13 @@ const Nav = styled.nav`
   }
 
   li {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-left: 1em;
     &:first-child {
       position: relative;
       margin: 0;
-      flex-basis: 100%;
+      flex-grow: 1;
     }
   }
 
@@ -37,8 +38,6 @@ const Nav = styled.nav`
     font-weight: 600;
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.base};
-    max-height: 20px;
-    vertical-align: middle;
     &:hover {
       color: white;
     }
@@ -62,6 +61,9 @@ const Menu = () => {
               Home
             </Link>
           </li>
+          <li>
+             <a href="https://ru.dpashutskii.com">Russian blog</a>
+           </li>
           <li>
             <Link to="/about/" activeStyle={activeLinkStyle}>
               About

@@ -21,7 +21,6 @@ const PostTemplate = ({ data, pageContext }) => {
     publishDate,
     tags,
   } = data.contentfulPost
-  console.log(title, slug)
   const postNode = data.contentfulPost
 
   const previous = pageContext.prev
