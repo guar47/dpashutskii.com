@@ -59,20 +59,13 @@ const Footer = () => (
       </Item>
       <Item>
         <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
+          href="https://twitter.com/guar47"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-starter-gcn
+          Dmitrii Pashutskii
         </a>{' '}
-        by{' '}
-        <a
-          href="https://github.com/ryanwiemer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @ryanwiemer
-        </a>
+        © {new Date().getFullYear()}
       </Item>
     </List>
   </Wrapper>

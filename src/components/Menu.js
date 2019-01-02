@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import githubIcon from '../images/github-icon.png'
+import linkedinIcon from '../images/linkedin-icon.png'
+import twitterIcon from '../images/twitter-icon.png'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.base};
@@ -34,8 +37,13 @@ const Nav = styled.nav`
     font-weight: 600;
     transition: all 0.2s;
     border-bottom: 2px solid ${props => props.theme.colors.base};
+    max-height: 20px;
+    vertical-align: middle;
     &:hover {
       color: white;
+    }
+    img {
+      max-width: 30px;
     }
   }
 `
@@ -60,9 +68,31 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            <Link to="/contact/" activeStyle={activeLinkStyle}>
-              Contact
-            </Link>
+            <a
+              href="https://github.com/guar47"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={githubIcon} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/dmitrii-pashutskii/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={linkedinIcon} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/guar47"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={twitterIcon} />
+            </a>
           </li>
         </ul>
       </Nav>
