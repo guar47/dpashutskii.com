@@ -11,6 +11,7 @@ import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
 import SEO from '../components/SEO'
 import Comments from '../components/Comments'
+import Share from '../components/Share'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -39,7 +40,8 @@ const PostTemplate = ({ data, pageContext }) => {
         {tags && <TagList tags={tags} />}
         <PostDate date={publishDate} />
         <PageBody body={body} />
-        <Comments title={title} id={slug}/>
+        <Share url={`${config.siteUrl}/${slug}`} title={title}/>
+        <Comments title={title} id={slug} />
       </Container>
       <PostLinks previous={previous} next={next} />
     </Layout>

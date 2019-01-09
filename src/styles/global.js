@@ -99,7 +99,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button,
-  input {
+  input,
+  [role="button"] {
     font-family: inherit;
     font-size: inherit;
     background: none;
@@ -114,6 +115,12 @@ const GlobalStyle = createGlobalStyle`
     &:invalid {
       box-shadow: none;
     }
+  }
+
+  /* Custom style */
+
+  .share-icon {
+    cursor: pointer;
   }
 `
 export default GlobalStyle
