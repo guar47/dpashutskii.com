@@ -41,9 +41,9 @@ const PostTemplate = ({ data, pageContext }) => {
         <PostDate date={publishDate} />
         <PageBody body={body} />
         <Share url={`${config.siteUrl}/${slug}`} title={title}/>
+        <PostLinks previous={previous} next={next} />
         <Comments title={title} id={slug} />
       </Container>
-      <PostLinks previous={previous} next={next} />
     </Layout>
   )
 }
